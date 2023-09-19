@@ -1,0 +1,18 @@
+version: "3.5"
+
+services:
+  app:
+    image: ${IMAGE_NAME}:${IMAGE_VERSION}
+    container_name: ${CONTAINER_NAME}
+    hostname: ${CONTAINER_HOSTNAME} 
+    privileged: true 
+    ports:
+      - ${NODE_PORT}:${CONTAINER_PORT}
+    networks:
+      - streamlit-app
+    volumes:
+      - bitcoin-app-storage:${HOME}
+volumes:
+  bitcoin-app-storage:
+networks:
+  streamlit-app:

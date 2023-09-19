@@ -1,0 +1,1 @@
+3. adımda istenilen deployment.yaml, service.yaml ve node'ların network konfigürasyonlarının sağlanabilmesi için gerekli olan calico.yaml burada bulunmaktadır.

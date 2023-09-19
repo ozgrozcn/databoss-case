@@ -1,0 +1,11 @@
+Case'in 4. adımı için hazırlanmıştır.
+
+Burada sanal makinelere networksel olarak erişebilen bir GitLab üzerinde main.py projesinin geliştirildiği varsayılmıştır.
+
+Kubernetes cluster'ına erişebilen bir sunucuya kurulacak olan bir gitlab-runner'ın bu pipeline'ı çalıştırılacağı düşünülmüştür.
+
+Her merge request ile tetiklenmesi düşünülmüş ve sadece main branch'inde çalışacağı varsayılmıştır.
+
+İlk olarak build aşamasında 1. adım için hazırlanan Dockerfile kullanılarak oluşturulan image hub.docker.com'a pushlanmıştır. 
+
+Deploy aşamasında ise, kubernetes master node'una ssh yaparak ../vagrant/deployments/deployment.yaml dosyasının apply edilmesi sağlanmıştır. 

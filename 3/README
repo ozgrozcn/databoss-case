@@ -1,0 +1,7 @@
+Case'in 3. maddesi için hazırlanmıştır.
+
+deployment.sh script'ini çalıştırarak cluster'a ../vagrant/deployments dizini içerisindeki .yaml dosyaları uygulanabilir ve pod'lar ayağa kaldırılabilir.
+
+Örnek çalıştırma:
+
+sudo bash deployment.sh

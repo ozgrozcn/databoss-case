@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: bitcoin-app-deployment
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: bitcoin-app
+  template:
+    metadata:
+      labels:
+        app: bitcoin-app
+    spec:
+      containers:
+      - name: bitcoin-app-container
+        image: ozguro/bitcoin-app:latest
+        ports:
+        - containerPort: 8080
+        resources:
+          requests:
+            cpu: "1"
+            memory: "500Mi"

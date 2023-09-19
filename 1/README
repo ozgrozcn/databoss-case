@@ -1,0 +1,10 @@
+
+Case'in 1. sorusu için hazırlanmıştır.
+
+Burada main.py dosyası çalıştırılabilir bir image haline getirilip, istenirse container oluşturulabilir.
+
+"sudo bash build-and-run.sh"  komutu çalıştırılarak yalnızca Docker Image'ı oluşturulabilir.
+"sudo bash build-and-run.sh true"  komutu ile de önce Docker Image'ı oluşturulur, ardından bu image'dan bir container ayağa kaldırılır.
+
+Buradaki uygulamanın 8080 portunda koşması hedeflenmiştir ve ona uygun bir konfigürasyon yapılmıştır.
+

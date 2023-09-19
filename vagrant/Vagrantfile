@@ -1,0 +1,32 @@
+require 'dotenv'
+Dotenv.load
+
+Vagrant.configure("2") do |config|
+    # Master node
+    config.vm.define "master" do |master|
+      master.vm.box = "ubuntu/bionic64" 
+      master.vm.network "private_network", type: "static", ip: ENV["MASTER_IP"]
+      master.vm.hostname = "k8s-master"
+      master.vm.provider "virtualbox" do |vb|
+        vb.memory = 2048
+        vb.cpus = 2
+      end
+    end
+  
+    # Worker nodes
+    (1..2).each do |i|
+      config.vm.define "worker#{i}" do |worker|
+        worker.vm.box = "ubuntu/bionic64" 
+        worker.vm.network "private_network", type: "static", ip: "192.168.56.#{i+2}"
+        worker.vm.hostname = "k8s-worker#{i}"
+        worker.vm.provider "virtualbox" do |vb|
+          vb.memory = 2048
+          vb.cpus = 3
+        end
+      end
+    end
+  end
+  
+
+
+

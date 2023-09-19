@@ -1,0 +1,8 @@
+Case'in 2. adımı için hazırlanmıştır.
+
+Burada kullanılacak olan script ../vagrant dizini içerisinde bulunan vagrant-build.sh script'idir.
+2. adımda istenilen sanal makinelerin oluşturulması ve bir Kubernetes cluster kurulabilmesi için bu script'in çalıştırılması yeterlidir.
+
+Örnek çalıştırma:
+
+sudo bash vagrant-build.sh
